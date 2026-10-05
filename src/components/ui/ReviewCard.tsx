@@ -32,10 +32,10 @@ function StarRating({ rating }: { rating: 1 | 2 | 3 | 4 | 5 }) {
 
 export default function ReviewCard({ review }: ReviewCardProps) {
   return (
-    <article className="bg-zinc-900 border border-white/10 rounded-none p-6 flex flex-col">
+    <article className="bg-zinc-900 border border-white/10 rounded-none p-6 flex flex-col h-full">
       {/* Optional photo */}
       {review.photo && (
-        <div className="mb-4 -mx-6 -mt-6 aspect-[4/3] overflow-hidden bg-zinc-800">
+        <div className="mb-4 -mx-6 -mt-6 h-48 overflow-hidden bg-zinc-800 flex items-center justify-center">
           <img
             src={review.photo}
             alt={`Photo of ${review.name}`}
@@ -49,14 +49,14 @@ export default function ReviewCard({ review }: ReviewCardProps) {
       <StarRating rating={review.rating} />
 
       {/* Review text */}
-      <p className="text-gray-200 text-sm leading-relaxed mt-3 flex-grow">
+      <p className="text-gray-200 text-sm leading-relaxed mt-3 flex-grow line-clamp-6">
         "{review.text}"
       </p>
 
       {/* Name and date */}
       <div className="mt-4 flex items-center justify-between">
-        <span className="font-display text-white font-medium">{review.name}</span>
-        <span className="text-gray-400 text-sm">{review.date}</span>
+        <span className="font-display text-white font-medium text-sm">{review.name}</span>
+        <span className="text-gray-400 text-xs">{review.date}</span>
       </div>
     </article>
   );

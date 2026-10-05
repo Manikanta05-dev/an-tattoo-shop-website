@@ -14,8 +14,8 @@ const NAV_LINKS = [
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="bg-[#1a1a1a] text-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-14 pb-8">
+    <footer className="bg-[#1a1a1a] text-white w-full overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-14 pb-8 w-full">
         {/* Top grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
           {/* Brand col */}

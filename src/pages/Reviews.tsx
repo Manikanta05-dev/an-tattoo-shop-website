@@ -87,29 +87,35 @@ export default function Reviews() {
       </section>
 
       {/* ── Review Cards Grid ────────────────────── */}
-      <section className="bg-[#1a1a1a] py-20">
-        <div className="max-w-[1100px] mx-auto px-6 lg:px-10">
+      <section className="bg-[#1a1a1a] py-20 overflow-hidden">
+        <div className="max-w-[1100px] mx-auto px-6 lg:px-10 w-full">
           <SectionReveal>
             <p className="text-[#888] text-[11px] font-bold tracking-[0.2em] uppercase mb-3">200+ Reviews</p>
             <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] font-black text-white uppercase mb-14 leading-tight">
               Client Testimonials
             </h2>
           </SectionReveal>
-          <SectionReveal variant="stagger">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {reviews.map((review) => (
-                <motion.div
-                  key={review.id}
-                  variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
-                >
-                  <ReviewCard
-                    review={{
-                      ...review,
-                      photo: review.photo ? `${IMAGES_BASE}${review.photo}` : undefined,
-                    }}
-                  />
-                </motion.div>
-              ))}
+          <SectionReveal>
+            <div className="overflow-x-auto reviews-scroll pb-4 -mx-6 px-6 lg:-mx-10 lg:px-10 w-full">
+              <div className="flex gap-6 w-max">
+                {reviews.map((review) => (
+                  <motion.div
+                    key={review.id}
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    className="flex-shrink-0 w-[350px] h-[400px]"
+                  >
+                    <ReviewCard
+                      review={{
+                        ...review,
+                        photo: review.photo ? `${IMAGES_BASE}${review.photo}` : undefined,
+                      }}
+                    />
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </SectionReveal>
         </div>

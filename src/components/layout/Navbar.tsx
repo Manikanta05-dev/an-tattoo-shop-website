@@ -28,12 +28,12 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 bg-white transition-shadow duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 bg-white transition-shadow duration-300 w-full overflow-hidden ${
         scrolled ? 'shadow-md' : 'shadow-sm'
       }`}
     >
-      <div className="max-w-[1200px] mx-auto px-6 lg:px-10">
-        <div className="flex items-center justify-between h-[68px]">
+      <div className="max-w-[1200px] mx-auto px-6 lg:px-10 w-full">
+        <div className="flex items-center justify-between h-[68px] w-full">
 
           {/* ── Logo ──────────────────────────── */}
           <Link to="/" onClick={close} className="flex items-baseline gap-1.5 flex-shrink-0">

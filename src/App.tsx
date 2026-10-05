@@ -35,10 +35,10 @@ function RootLayout() {
   const location = useLocation();
 
   return (
-    <>
+    <div className="overflow-x-hidden w-full">
       <ScrollIndicator />
       <Navbar />
-      <main>
+      <main className="overflow-x-hidden w-full">
         <AnimatePresence mode="wait">
           <Outlet key={location.pathname} />
         </AnimatePresence>
@@ -46,7 +46,7 @@ function RootLayout() {
       <WhatsAppButton />
       <Footer />
       <RouteTracker />
-    </>
+    </div>
   );
 }
 
