@@ -50,14 +50,82 @@ button {
   cursor: pointer;
 }
 
-/* ── Global button lift effect ───────────────────────────── */
-/* Applied to all <a> and <button> elements that behave as CTAs */
+:root {
+  --button-primary-bg: #c0392b;
+  --button-primary-bg-hover: #a72e26;
+  --button-primary-bg-active: #8e271f;
+  --button-primary-text: #f4f0e6;
+  --button-secondary-bg: #1a1a1a;
+  --button-secondary-bg-hover: #c0392b;
+  --button-outline-text: #1a1a1a;
+}
+
+/* ── Shared button system ───────────────────────────── */
 .btn,
 a.btn,
 button.btn {
-  display: inline-block;
-  transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  line-height: 1;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
 }
+
+.btn-primary {
+  background-color: var(--button-primary-bg);
+  border-color: var(--button-primary-bg);
+  color: var(--button-primary-text);
+}
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background-color: var(--button-primary-bg-hover);
+  border-color: var(--button-primary-bg-hover);
+  color: var(--button-primary-text);
+}
+.btn-primary:active {
+  background-color: var(--button-primary-bg-active);
+  border-color: var(--button-primary-bg-active);
+  color: var(--button-primary-text);
+}
+
+.btn-secondary {
+  background-color: var(--button-secondary-bg);
+  border-color: var(--button-secondary-bg);
+  color: var(--button-primary-text);
+}
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+  background-color: var(--button-secondary-bg-hover);
+  border-color: var(--button-secondary-bg-hover);
+  color: var(--button-primary-text);
+}
+.btn-secondary:active {
+  background-color: var(--button-primary-bg-active);
+  border-color: var(--button-primary-bg-active);
+  color: var(--button-primary-text);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border-color: var(--button-secondary-bg);
+  color: var(--button-outline-text);
+}
+.btn-outline:hover,
+.btn-outline:focus-visible {
+  background-color: var(--button-primary-bg);
+  border-color: var(--button-primary-bg);
+  color: var(--button-primary-text);
+}
+.btn-outline:active {
+  background-color: var(--button-primary-bg-active);
+  border-color: var(--button-primary-bg-active);
+  color: var(--button-primary-text);
+}
+
 .btn:hover,
 a.btn:hover,
 button.btn:hover {
@@ -69,6 +137,20 @@ a.btn:active,
 button.btn:active {
   transform: translateY(0);
   box-shadow: none;
+}
+
+.btn:disabled,
+.btn[disabled],
+a.btn[aria-disabled='true'],
+button.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+  box-shadow: none;
+  transform: none;
+  background-color: #d9d2c8;
+  border-color: #d9d2c8;
+  color: rgba(26, 26, 26, 0.72);
 }
 
 /* Hide scrollbars for horizontal scroll containers */

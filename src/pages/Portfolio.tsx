@@ -100,7 +100,7 @@ export default function Portfolio() {
                   </p>
                   <Link
                     to="/contact"
-                    className="inline-block bg-[#1a1a1a] text-white text-[10px] font-bold tracking-[0.18em] uppercase px-5 py-2 hover:bg-[#c0392b] transition-colors duration-200"
+                    className="btn btn-secondary inline-block px-5 py-2 text-[10px]"
                   >
                     Book this collection
                   </Link>
@@ -129,7 +129,7 @@ export default function Portfolio() {
               href={`https://wa.me/${WHATSAPP_NUMBER}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn bg-[#c0392b] text-white font-black text-[12px] tracking-[0.18em] uppercase px-10 py-4 hover:bg-[#e74c3c] transition-colors duration-200 flex-shrink-0"
+              className="btn btn-primary px-10 py-4 flex-shrink-0 text-[12px]"
             >
               Book Now
             </a>
@@ -247,7 +247,7 @@ export default function Portfolio() {
             href={`https://wa.me/${WHATSAPP_NUMBER}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn bg-[#c0392b] text-white font-black text-[12px] tracking-[0.18em] uppercase px-10 py-4 hover:bg-[#e74c3c] transition-colors duration-200 flex-shrink-0"
+            className="btn btn-primary px-10 py-4 flex-shrink-0 text-[12px]"
           >
             Book Now
           </a>

@@ -67,7 +67,7 @@ export default function Footer() {
               href={`https://wa.me/${WHATSAPP_NUMBER}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn inline-block bg-[#c0392b] text-white font-black text-[11px] tracking-[0.18em] uppercase px-6 py-3 hover:bg-[#e74c3c]"
+              className="btn btn-primary inline-block px-6 py-3 text-[11px]"
             >
               WhatsApp Us
             </a>

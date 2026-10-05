@@ -50,7 +50,7 @@ export default function Admin() {
           <div className="flex flex-wrap gap-3 my-6">
             <button
               onClick={() => downloadCSV(leadsToCSV(leads), 'an-tattoo-leads.csv')}
-              className="bg-[#1a1a1a] text-white text-[11px] font-bold tracking-[0.15em] uppercase px-6 py-3 hover:bg-[#c0392b] transition-colors duration-200"
+              className="btn btn-secondary px-6 py-3 text-[11px]"
             >
               Export CSV
             </button>

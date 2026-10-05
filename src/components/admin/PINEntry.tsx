@@ -36,7 +36,7 @@ export default function PINEntry({ onLogin }: PINEntryProps) {
           )}
           <button
             type="submit"
-            className="w-full btn bg-[#1a1a1a] text-white font-black text-[11px] tracking-[0.18em] uppercase py-3 hover:bg-[#c0392b] transition-colors duration-200"
+            className="btn btn-secondary w-full py-3 text-[11px]"
           >
             Enter
           </button>

@@ -55,13 +55,13 @@ export default function Artist() {
                 href={`https://wa.me/${WHATSAPP_NUMBER}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn bg-[#c0392b] text-white font-black text-[12px] tracking-[0.18em] uppercase px-10 py-4 min-h-[52px] hover:bg-[#e74c3c] transition-colors duration-200 text-center"
+                className="btn btn-primary px-10 py-4 min-h-[52px] text-[12px] text-center"
               >
                 Book with Anil
               </a>
               <Link
                 to="/portfolio"
-                className="btn border-2 border-[#1a1a1a] text-[#1a1a1a] font-black text-[12px] tracking-[0.18em] uppercase px-10 py-4 min-h-[52px] hover:bg-[#c0392b] hover:text-white hover:border-[#c0392b] transition-colors duration-200 text-center"
+                className="btn btn-outline border-2 px-10 py-4 min-h-[52px] text-[12px] text-center"
               >
                 View Portfolio
               </Link>
@@ -120,7 +120,7 @@ export default function Artist() {
           <div className="mt-10">
             <Link
               to="/portfolio"
-              className="inline-block btn border-2 border-[#1a1a1a] text-[#1a1a1a] font-black text-[11px] tracking-[0.18em] uppercase px-8 py-4 hover:bg-[#c0392b] hover:text-white hover:border-[#c0392b] transition-colors duration-200"
+              className="inline-block btn btn-outline border-2 px-8 py-4 text-[11px]"
             >
               View Full Portfolio
             </Link>

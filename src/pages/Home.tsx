@@ -156,13 +156,13 @@ export default function Home() {
                 href={`https://wa.me/${WHATSAPP_NUMBER}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn bg-[#c0392b] text-white font-black text-[13px] tracking-[0.18em] uppercase px-10 py-4 hover:bg-[#e74c3c] transition-colors duration-200 text-center"
+                className="btn btn-primary px-10 py-4 text-[13px] text-center"
               >
                 Book Free Consult
               </a>
               <Link
                 to="/portfolio"
-                className="btn border-2 border-[#1a1a1a] text-[#1a1a1a] font-black text-[13px] tracking-[0.18em] uppercase px-10 py-4 hover:bg-[#c0392b] hover:text-white hover:border-[#c0392b] transition-colors duration-200 text-center"
+                className="btn btn-outline border-2 px-10 py-4 text-[13px] text-center"
               >
                 View Gallery
               </Link>
@@ -295,13 +295,13 @@ export default function Home() {
                 href={`https://wa.me/${WHATSAPP_NUMBER}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn bg-[#1a1a1a] text-white font-black text-[12px] tracking-[0.18em] uppercase px-10 py-4 hover:bg-[#c0392b] transition-colors duration-200 text-center"
+                className="btn btn-secondary px-10 py-4 text-center text-[12px]"
               >
                 Book Now
               </a>
               <Link
                 to="/portfolio"
-                className="btn border-2 border-[#1a1a1a] text-[#1a1a1a] font-black text-[12px] tracking-[0.18em] uppercase px-10 py-4 hover:bg-[#c0392b] hover:text-white hover:border-[#c0392b] transition-colors duration-200 text-center"
+                className="btn btn-outline border-2 px-10 py-4 text-center text-[12px]"
               >
                 See Our Work
               </Link>
@@ -328,7 +328,7 @@ export default function Home() {
               </p>
               <Link
                 to="/artist"
-                className="inline-block btn bg-[#1a1a1a] text-white font-black text-[11px] tracking-[0.18em] uppercase px-8 py-4 hover:bg-[#e8b84b] hover:text-[#1a1a1a] transition-colors duration-200"
+                className="inline-block btn btn-secondary px-8 py-4 text-[11px]"
               >
                 Meet the Artist
               </Link>
@@ -391,7 +391,7 @@ export default function Home() {
               href={`https://wa.me/${WHATSAPP_NUMBER}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block btn bg-[#c0392b] text-white font-black text-[12px] tracking-[0.18em] uppercase px-10 py-4 hover:bg-[#e74c3c] transition-colors duration-200"
+              className="inline-block btn btn-primary px-10 py-4 text-[12px]"
             >
               Book Free Consultation
             </a>
@@ -471,7 +471,7 @@ export default function Home() {
               href={`https://wa.me/${WHATSAPP_NUMBER}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block btn bg-[#c0392b] text-white font-black text-[13px] tracking-[0.2em] uppercase px-14 py-5 hover:bg-[#e74c3c] transition-colors duration-200"
+              className="inline-block btn btn-primary px-14 py-5 text-[13px]"
             >
               Book Free Consultation
             </a>
@@ -515,7 +515,7 @@ export default function Home() {
                   href={`https://wa.me/${WHATSAPP_NUMBER}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block btn bg-[#1a1a1a] text-white font-black text-[12px] tracking-[0.18em] uppercase px-10 py-4 hover:bg-[#c0392b] transition-colors duration-200"
+                  className="inline-block btn btn-secondary px-10 py-4 text-[12px]"
                 >
                   Ask Us How
                 </a>
@@ -551,7 +551,7 @@ export default function Home() {
               </div>
               <Link
                 to="/reviews"
-                className="hidden md:inline-block btn border-2 border-[#1a1a1a] text-[#1a1a1a] font-black text-[11px] tracking-[0.18em] uppercase px-7 py-3 hover:bg-[#c0392b] hover:text-white hover:border-[#c0392b] transition-colors duration-200"
+                className="hidden md:inline-block btn btn-outline border-2 px-7 py-3 text-[11px]"
               >
                 All Reviews
               </Link>
@@ -595,21 +595,21 @@ export default function Home() {
             <button
               onClick={() => reviewRef.current?.scrollBy({ left: -400, behavior: 'smooth' })}
               aria-label="Scroll reviews left"
-              className="btn w-11 h-11 border-2 border-[#1a1a1a] flex items-center justify-center hover:bg-[#c0392b] hover:border-[#c0392b] hover:text-white transition-colors duration-200 text-[#1a1a1a]"
+              className="btn btn-outline w-11 h-11 border-2 flex items-center justify-center text-[#1a1a1a]"
             >
               ←
             </button>
             <button
               onClick={() => reviewRef.current?.scrollBy({ left: 400, behavior: 'smooth' })}
               aria-label="Scroll reviews right"
-              className="btn w-11 h-11 border-2 border-[#1a1a1a] flex items-center justify-center hover:bg-[#c0392b] hover:border-[#c0392b] hover:text-white transition-colors duration-200 text-[#1a1a1a]"
+              className="btn btn-outline w-11 h-11 border-2 flex items-center justify-center text-[#1a1a1a]"
             >
               →
             </button>
           </div>
           <Link
             to="/reviews"
-            className="md:hidden btn border-2 border-[#1a1a1a] text-[#1a1a1a] font-black text-[11px] tracking-[0.18em] uppercase px-7 py-3 hover:bg-[#c0392b] hover:text-white hover:border-[#c0392b] transition-colors duration-200"
+            className="md:hidden btn btn-outline border-2 px-7 py-3 text-[11px]"
           >
             All Reviews
           </Link>
@@ -629,7 +629,7 @@ export default function Home() {
               </h2>
               <Link
                 to="/portfolio"
-                className="hidden md:inline-block btn border-2 border-[#1a1a1a] text-[#1a1a1a] font-black text-[11px] tracking-[0.18em] uppercase px-7 py-3 hover:bg-[#c0392b] hover:text-white hover:border-[#c0392b] transition-colors duration-200"
+                className="hidden md:inline-block btn btn-outline border-2 px-7 py-3 text-[11px]"
               >
                 Full Gallery
               </Link>
@@ -664,7 +664,7 @@ export default function Home() {
           <div className="mt-8 md:hidden">
             <Link
               to="/portfolio"
-              className="inline-block btn border-2 border-[#1a1a1a] text-[#1a1a1a] font-black text-[11px] tracking-[0.18em] uppercase px-7 py-3 hover:bg-[#c0392b] hover:text-white hover:border-[#c0392b] transition-colors duration-200"
+              className="inline-block btn btn-outline border-2 px-7 py-3 text-[11px]"
             >
               Full Gallery
             </Link>
@@ -688,13 +688,13 @@ export default function Home() {
               href={`https://wa.me/${WHATSAPP_NUMBER}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn bg-[#c0392b] text-white font-black text-[12px] tracking-[0.18em] uppercase px-10 py-4 hover:bg-[#e74c3c] transition-colors duration-200 text-center"
+              className="btn btn-primary px-10 py-4 text-center text-[12px]"
             >
               WhatsApp Us
             </a>
             <Link
               to="/contact"
-              className="border-2 border-white text-white font-black text-[12px] tracking-[0.18em] uppercase px-10 py-4 hover:bg-white hover:text-[#1a1a1a] transition-colors duration-200 text-center"
+              className="btn btn-outline border-2 border-white text-white px-10 py-4 text-center text-[12px]"
             >
               Book Consultation
             </Link>

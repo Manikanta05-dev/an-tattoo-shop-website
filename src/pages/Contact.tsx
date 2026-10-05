@@ -103,7 +103,7 @@ export default function Contact() {
                     Your consultation request has been sent via WhatsApp. We'll confirm your slot shortly.
                   </p>
                   <button
-                    className="mt-8 bg-[#1a1a1a] text-white text-[11px] font-bold tracking-[0.18em] uppercase px-8 py-3 hover:bg-[#c0392b] transition-colors duration-200"
+                    className="btn btn-secondary mt-8 px-8 py-3 text-[11px]"
                     onClick={() => { setSubmitted(false); setForm({ name: '', phone: '', tattooIdea: '', preferredDate: '', message: '' }); }}
                   >
                     Book Another
@@ -199,7 +199,7 @@ export default function Contact() {
 
                   <button
                     type="submit"
-                    className="w-full btn bg-[#1a1a1a] text-white font-black text-[12px] tracking-[0.18em] uppercase py-4 min-h-[52px] hover:bg-[#c0392b] transition-colors duration-200 mt-2"
+                    className="btn btn-secondary w-full py-4 min-h-[52px] mt-2 text-[12px]"
                   >
                     Send via WhatsApp
                   </button>
