@@ -92,13 +92,19 @@ export default function About() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-1">
             {studioGallery.map((img, i) => (
               <SectionReveal key={i}>
-                <div className="aspect-square overflow-hidden group bg-[#222]">
+                <div className="relative aspect-square overflow-hidden group bg-[#222]">
                   <img
                     src={`${IMAGES_BASE}${img.src}`}
                     alt={img.alt}
                     loading="lazy"
-                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
                   />
+                  {/* InkHub-style overlay on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <div className="text-center text-white px-4">
+                      <p className="font-display text-lg md:text-xl font-bold uppercase">{img.alt}</p>
+                    </div>
+                  </div>
                 </div>
               </SectionReveal>
             ))}

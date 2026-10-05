@@ -253,11 +253,11 @@ export default function Home() {
       </section>
 
       {/* ══════════════════════════════════════════════
-          2. #INKYOURSTORY — yellow bg + client strip
+          2. #INKYOURSTORY — yellow bg + client strip with text overlays
       ══════════════════════════════════════════════ */}
-      <section className="bg-[#e8b84b]">
+      <section className="bg-[#e8b84b] overflow-hidden">
         {/* Hashtag heading */}
-        <div className="max-w-[1200px] mx-auto px-6 lg:px-10 pt-14 pb-6">
+        <div className="max-w-[1200px] mx-auto px-6 lg:px-10 pt-12 pb-6">
           <SectionReveal>
             <h2 className="font-display text-[clamp(2.5rem,7vw,6rem)] font-black text-[#1a1a1a] leading-none">
               #ink<em className="not-italic">yourstory</em>
@@ -265,22 +265,107 @@ export default function Home() {
           </SectionReveal>
         </div>
 
-        {/* 5-col client photo strip — full width */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5">
-          {clientStrip.map((img, i) => (
-            <div key={i} className="aspect-[1500/647] overflow-hidden">
-              <img
-                src={`${IMAGES_BASE}${img.src}`}
-                alt={img.alt}
-                loading={i < 2 ? 'eager' : 'lazy'}
-                className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
-              />
-            </div>
-          ))}
+        {/* Auto-scrolling client photo strip — TWO ROWS with text overlays */}
+        <div className="relative space-y-0 overflow-hidden">
+          {/* First Row - Scroll Right to Left */}
+          <div className="relative h-[200px] sm:h-[225px] md:h-[250px] lg:h-[275px] overflow-hidden">
+            <motion.div
+              className="flex gap-0 h-full"
+              animate={{
+                x: [0, -2400],
+              }}
+              transition={{
+                x: {
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  duration: 35,
+                  ease: "linear",
+                },
+              }}
+            >
+              {[...clientStrip, ...clientStrip, ...clientStrip, ...clientStrip, ...clientStrip].map((img, i) => (
+                <div key={`row1-${i}`} className="relative flex-shrink-0 w-[480px] sm:w-[560px] md:w-[640px] lg:w-[720px] h-full overflow-hidden group">
+                  <img
+                    src={`${IMAGES_BASE}${img.src}`}
+                    alt={img.alt}
+                    loading={i < 3 ? 'eager' : 'lazy'}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  {/* Text overlay - appears on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-8">
+                    <div className="text-center text-white px-6">
+                      <p className="font-display text-2xl sm:text-3xl md:text-4xl font-bold">
+                        {i % 5 === 0 && 'No Pain'}
+                        {i % 5 === 1 && 'Customize'}
+                        {i % 5 === 2 && 'Custom Pet Tattoo'}
+                        {i % 5 === 3 && 'Face Tattoo'}
+                        {i % 5 === 4 && 'NEW DROP'}
+                      </p>
+                      <p className="text-sm sm:text-base mt-1 opacity-90">
+                        {i % 5 === 0 && 'No Commitment'}
+                        {i % 5 === 1 && 'your tattoo'}
+                        {i % 5 === 2 && ''}
+                        {i % 5 === 3 && ''}
+                        {i % 5 === 4 && 'LIVE NOW'}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+
+          {/* Second Row - Scroll Left to Right (Reverse) */}
+          <div className="relative h-[200px] sm:h-[225px] md:h-[250px] lg:h-[275px] overflow-hidden">
+            <motion.div
+              className="flex gap-0 h-full"
+              animate={{
+                x: [-2400, 0],
+              }}
+              transition={{
+                x: {
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  duration: 35,
+                  ease: "linear",
+                },
+              }}
+            >
+              {[...clientStrip, ...clientStrip, ...clientStrip, ...clientStrip, ...clientStrip].reverse().map((img, i) => (
+                <div key={`row2-${i}`} className="relative flex-shrink-0 w-[480px] sm:w-[560px] md:w-[640px] lg:w-[720px] h-full overflow-hidden group">
+                  <img
+                    src={`${IMAGES_BASE}${img.src}`}
+                    alt={img.alt}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  {/* Text overlay - appears on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-8">
+                    <div className="text-center text-white px-6">
+                      <p className="font-display text-2xl sm:text-3xl md:text-4xl font-bold">
+                        {i % 5 === 0 && 'Skin Safe'}
+                        {i % 5 === 1 && 'Waterproof'}
+                        {i % 5 === 2 && 'Easy Application'}
+                        {i % 5 === 3 && 'Premium Quality'}
+                        {i % 5 === 4 && 'Custom Design'}
+                      </p>
+                      <p className="text-sm sm:text-base mt-1 opacity-90">
+                        {i % 5 === 0 && 'FDA Approved Ink'}
+                        {i % 5 === 1 && 'Lasts 1-2 Weeks'}
+                        {i % 5 === 2 && 'In Minutes'}
+                        {i % 5 === 3 && 'Professional Work'}
+                        {i % 5 === 4 && 'Made For You'}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </motion.div>
+          </div>
         </div>
 
         {/* Body text + CTA below strip */}
-        <div className="max-w-[1200px] mx-auto px-6 lg:px-10 py-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div className="max-w-[1200px] mx-auto px-6 lg:px-10 pt-10 pb-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <SectionReveal>
             <p className="text-[#1a1a1a] text-[16px] leading-relaxed max-w-lg">
               Every tattoo we create starts with your story. Whether it's a bold statement, a subtle symbol, or a tribute to someone you love — we take the time to understand what matters to you before any ink touches skin.

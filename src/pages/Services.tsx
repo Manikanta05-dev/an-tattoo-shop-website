@@ -110,14 +110,21 @@ export default function Services() {
           <SectionReveal variant="stagger">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {processSteps.map((step) => (
-                <div key={step.num} className="bg-[#222] border border-white/10">
-                  <div className="aspect-[1500/647] overflow-hidden">
+                <div key={step.num} className="bg-[#222] border border-white/10 group">
+                  <div className="relative aspect-[1500/647] overflow-hidden">
                     <img
                       src={`${IMAGES_BASE}${step.img}`}
                       alt={step.title}
                       loading="lazy"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
+                    {/* InkHub-style overlay on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#e8b84b]/90 via-[#e8b84b]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                      <div className="text-center text-[#1a1a1a] px-4">
+                        <p className="font-display text-4xl font-black">{step.num}</p>
+                      </div>
+                    </div>
+                  </div>
                   </div>
                   <div className="p-6">
                     <span className="font-display text-[4rem] font-black text-white/10 leading-none block mb-3">

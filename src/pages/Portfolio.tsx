@@ -80,7 +80,7 @@ export default function Portfolio() {
             {placementGallery.map((item, i) => (
               <div key={i} className="bg-white">
                 {/* Image — portrait ratio like reference */}
-                <div className="aspect-[3/4] overflow-hidden cursor-pointer group bg-white"
+                <div className="relative aspect-[3/4] overflow-hidden cursor-pointer group bg-white"
                   onClick={() => {
                     const idx = portfolioItems.findIndex((p) => p.src === item.img);
                     if (idx !== -1) setLightboxIndex(idx);
@@ -90,8 +90,15 @@ export default function Portfolio() {
                     src={`${IMAGES_BASE}${item.img}`}
                     alt={item.alt}
                     loading={i < 3 ? 'eager' : 'lazy'}
-                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
                   />
+                  {/* InkHub-style overlay on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                    <div className="text-center text-white px-4">
+                      <p className="font-display text-2xl md:text-3xl font-bold uppercase">{item.placement}</p>
+                      <p className="text-sm mt-1 opacity-90">{item.cat} Style</p>
+                    </div>
+                  </div>
                 </div>
                 {/* Label row — matches reference exactly */}
                 <div className="px-4 py-4">
@@ -147,7 +154,7 @@ export default function Portfolio() {
             {featuredGallery.map((item, i) => (
               <SectionReveal key={i}>
                 <div className="bg-white group">
-                  <div className="aspect-square overflow-hidden cursor-pointer"
+                  <div className="relative aspect-square overflow-hidden cursor-pointer"
                     onClick={() => {
                       const idx = portfolioItems.findIndex((p) => p.src === item.img);
                       if (idx !== -1) setLightboxIndex(idx);
@@ -157,8 +164,15 @@ export default function Portfolio() {
                       src={`${IMAGES_BASE}${item.img}`}
                       alt={`${item.label} tattoo`}
                       loading="lazy"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
+                    {/* InkHub-style overlay on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-8">
+                      <div className="text-center text-white px-4">
+                        <p className="font-display text-3xl md:text-4xl font-bold uppercase">{item.label}</p>
+                        <p className="text-base mt-2 opacity-90 uppercase tracking-wider">{item.cat}</p>
+                      </div>
+                    </div>
                   </div>
                   <div className="px-4 py-4">
                     <p className="text-[#1a1a1a] font-bold text-[12px] tracking-widest uppercase mb-1">

@@ -106,13 +106,19 @@ export default function Artist() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-1">
             {artist.portfolioImages.map((item, i) => (
               <SectionReveal key={item.id}>
-                <div className="aspect-square overflow-hidden group bg-white">
+                <div className="relative aspect-square overflow-hidden group bg-white">
                   <img
                     src={`${IMAGES_BASE}${item.src}`}
                     alt={item.alt}
                     loading={i < 4 ? 'eager' : 'lazy'}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
+                  {/* InkHub-style overlay on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#e8b84b]/90 via-[#e8b84b]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <div className="text-center text-[#1a1a1a] px-4">
+                      <p className="font-display text-sm md:text-base font-bold uppercase">{item.category}</p>
+                    </div>
+                  </div>
                 </div>
               </SectionReveal>
             ))}
