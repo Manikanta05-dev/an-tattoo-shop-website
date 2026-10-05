@@ -111,7 +111,7 @@ export default function Services() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {processSteps.map((step) => (
                 <div key={step.num} className="bg-[#222] border border-white/10">
-                  <div className="aspect-[4/3] overflow-hidden">
+                  <div className="aspect-[1500/647] overflow-hidden">
                     <img
                       src={`${IMAGES_BASE}${step.img}`}
                       alt={step.title}

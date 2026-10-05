@@ -266,12 +266,9 @@ export default function Home() {
         </div>
 
         {/* 5-col client photo strip — full width */}
-        <div
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5"
-          style={{ height: 'clamp(280px, 36vw, 540px)' }}
-        >
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5">
           {clientStrip.map((img, i) => (
-            <div key={i} className="overflow-hidden">
+            <div key={i} className="aspect-[1500/647] overflow-hidden">
               <img
                 src={`${IMAGES_BASE}${img.src}`}
                 alt={img.alt}
@@ -346,7 +343,7 @@ export default function Home() {
                     key={item.id}
                     className="flex-shrink-0 w-[220px] bg-[#f5f2ec] group"
                   >
-                    <div className="h-[280px] overflow-hidden">
+                    <div className="aspect-square overflow-hidden">
                       <img
                         src={item.src}
                         alt={item.alt}
@@ -401,12 +398,15 @@ export default function Home() {
           <SectionReveal>
             <div className="grid grid-cols-2 gap-3">
               {notSureImages.map((img, i) => (
-                <div key={i} className={`overflow-hidden ${i === 0 ? 'mt-8' : '-mt-8'}`}>
+                <div
+                  key={i}
+                  className={`overflow-hidden ${i === 0 ? 'mt-8 aspect-[1500/647]' : '-mt-8 aspect-[1944/2500]'}`}
+                >
                   <img
                     src={`${IMAGES_BASE}${img.src}`}
                     alt={img.alt}
                     loading="lazy"
-                    className="w-full aspect-[3/4] object-cover hover:scale-105 transition-transform duration-700"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />
                 </div>
               ))}
@@ -434,7 +434,7 @@ export default function Home() {
                   variants={{ hidden: { opacity: 0, y: 28 }, visible: { opacity: 1, y: 0, transition: { duration: 0.55 } } }}
                   className="bg-[#f5f2ec] border border-[#ebe8e3]"
                 >
-                  <div className="aspect-[4/3] overflow-hidden">
+                  <div className="aspect-[1500/647] overflow-hidden">
                     <img
                       src={`${IMAGES_BASE}${step.img}`}
                       alt={step.title}
@@ -520,7 +520,7 @@ export default function Home() {
                   Ask Us How
                 </a>
               </div>
-              <div className="aspect-[4/3] overflow-hidden">
+              <div className="aspect-square overflow-hidden">
                 <img
                   src={`${IMAGES_BASE}inkhub-13.jpg`}
                   alt="Gift a tattoo consultation"

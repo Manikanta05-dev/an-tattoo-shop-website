@@ -128,14 +128,14 @@ export default function Reviews() {
             {videoTestimonials.map((v, i) => (
               <SectionReveal key={i}>
                 <div
-                  className="relative aspect-video overflow-hidden cursor-pointer group border border-[#e0ddd8] bg-white"
+                  className="relative aspect-video overflow-hidden cursor-pointer group border border-[#e0ddd8] bg-black"
                   onClick={() => setShowVideoMsg(i)}
                 >
                   <img
                     src={`${IMAGES_BASE}${v.poster}`}
                     alt={`${v.name} video testimonial`}
                     loading="lazy"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center">
                     <div className="w-16 h-16 rounded-full border-2 border-white flex items-center justify-center bg-white/10 group-hover:bg-[#e8b84b] group-hover:border-[#e8b84b] transition-colors duration-200">

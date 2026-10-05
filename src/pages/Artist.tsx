@@ -23,7 +23,7 @@ export default function Artist() {
             src={`${IMAGES_BASE}${artist.photo}`}
             alt={`${artist.name} — AN Tattoo Shop lead artist`}
             loading="eager"
-            className="w-full h-full object-cover object-top"
+            className="w-full h-full object-cover object-right"
             style={{ position: 'absolute', inset: 0 }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#f5f2ec]/40 via-transparent to-transparent lg:hidden" />

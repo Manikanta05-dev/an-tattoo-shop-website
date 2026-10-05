@@ -68,7 +68,7 @@ export default function About() {
             </div>
           </SectionReveal>
           <SectionReveal>
-            <div className="aspect-[3/4] overflow-hidden">
+            <div className="aspect-[1500/647] overflow-hidden">
               <img
                 src={`${IMAGES_BASE}inkhub-2.jpg`}
                 alt="AN Tattoo Shop studio"
@@ -92,12 +92,12 @@ export default function About() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-1">
             {studioGallery.map((img, i) => (
               <SectionReveal key={i}>
-                <div className="aspect-square overflow-hidden group">
+                <div className="aspect-square overflow-hidden group bg-[#222]">
                   <img
                     src={`${IMAGES_BASE}${img.src}`}
                     alt={img.alt}
                     loading="lazy"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
                   />
                 </div>
               </SectionReveal>
