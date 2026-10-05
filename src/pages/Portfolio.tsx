@@ -80,7 +80,7 @@ export default function Portfolio() {
             {placementGallery.map((item, i) => (
               <div key={i} className="bg-white">
                 {/* Image — portrait ratio like reference */}
-                <div className="aspect-[3/4] overflow-hidden cursor-pointer group"
+                <div className="aspect-[3/4] overflow-hidden cursor-pointer group bg-white"
                   onClick={() => {
                     const idx = portfolioItems.findIndex((p) => p.src === item.img);
                     if (idx !== -1) setLightboxIndex(idx);
@@ -90,7 +90,7 @@ export default function Portfolio() {
                     src={`${IMAGES_BASE}${item.img}`}
                     alt={item.alt}
                     loading={i < 3 ? 'eager' : 'lazy'}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
                   />
                 </div>
                 {/* Label row — matches reference exactly */}

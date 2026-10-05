@@ -280,13 +280,12 @@ export default function Contact() {
               </div>
 
               {/* Google Maps embed */}
-              <div className="border border-[#e0ddd8] overflow-hidden">
+              <div className="aspect-[4/3] sm:aspect-video border border-[#e0ddd8] overflow-hidden">
                 <iframe
                   title="AN Tattoo Shop location — Kalyandurg"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30518.12!2d77.1050!3d14.5595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb5a4c4c2a61e57%3A0xb96e8a3b3e3e3e3e!2sKalyandurg%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1234567890!5m2!1sen!2sin"
-                  width="100%"
-                  height="280"
-                  style={{ border: 0, display: 'block' }}
+                  className="block h-full w-full"
+                  style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"

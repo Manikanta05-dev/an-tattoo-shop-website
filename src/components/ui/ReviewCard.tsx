@@ -35,12 +35,12 @@ export default function ReviewCard({ review }: ReviewCardProps) {
     <article className="bg-zinc-900 border border-white/10 rounded-none p-6 flex flex-col">
       {/* Optional photo */}
       {review.photo && (
-        <div className="mb-4 -mx-6 -mt-6">
+        <div className="mb-4 -mx-6 -mt-6 aspect-[4/3] overflow-hidden bg-zinc-800">
           <img
             src={review.photo}
             alt={`Photo of ${review.name}`}
             loading="lazy"
-            className="h-48 w-full object-cover"
+            className="h-full w-full object-contain"
           />
         </div>
       )}
