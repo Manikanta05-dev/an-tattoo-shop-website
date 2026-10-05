@@ -166,7 +166,7 @@ export default function Reviews() {
                   Full video testimonials are being recorded and will be uploaded shortly.
                 </p>
                 <button
-                  className="btn bg-[#1a1a1a] text-white font-black text-[11px] tracking-[0.18em] uppercase px-8 py-3 hover:bg-[#c0392b] transition-colors duration-200"
+                  className="btn btn-secondary px-8 py-3 text-[11px]"
                   onClick={() => setShowVideoMsg(null)}
                 >
                   Close
@@ -191,13 +191,13 @@ export default function Reviews() {
               href={`https://wa.me/${WHATSAPP_NUMBER}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn bg-[#c0392b] text-white font-black text-[12px] tracking-[0.18em] uppercase px-10 py-4 min-h-[52px] hover:bg-[#e74c3c] transition-colors duration-200 text-center"
+              className="btn btn-primary px-10 py-4 min-h-[52px] text-center text-[12px]"
             >
               WhatsApp Us
             </a>
             <Link
               to="/contact"
-              className="border-2 border-white text-white font-black text-[12px] tracking-[0.18em] uppercase px-10 py-4 min-h-[52px] hover:bg-white hover:text-[#1a1a1a] transition-colors duration-200 text-center"
+              className="btn btn-outline border-2 border-white text-white px-10 py-4 min-h-[52px] text-center text-[12px]"
             >
               Book Your Session
             </Link>

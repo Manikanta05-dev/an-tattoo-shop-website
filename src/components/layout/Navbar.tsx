@@ -71,7 +71,7 @@ export default function Navbar() {
               href={`https://wa.me/${WHATSAPP_NUMBER}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn bg-[#c0392b] text-white font-black text-[12px] tracking-[0.18em] uppercase px-7 py-3 rounded-none hover:bg-[#e74c3c] hover:shadow-[0_6px_20px_rgba(192,57,43,0.35)] whitespace-nowrap"
+              className="btn btn-primary px-7 py-3 rounded-none whitespace-nowrap"
             >
               Book Now
             </a>
@@ -121,7 +121,7 @@ export default function Navbar() {
                 href={`https://wa.me/${WHATSAPP_NUMBER}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn mt-5 bg-[#c0392b] text-white font-black text-[12px] tracking-[0.18em] uppercase px-6 py-3.5 text-center hover:bg-[#e74c3c]"
+                className="btn btn-primary mt-5 px-6 py-3.5 text-center"
               >
                 Book Now
               </a>

@@ -33,7 +33,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
       {/* Book Now CTA */}
       <Link
         to="/contact"
-        className="btn inline-flex items-center justify-center bg-[#c0392b] text-white px-6 py-3 min-h-[44px] text-sm tracking-wide font-bold hover:bg-[#e74c3c] transition-colors duration-300"
+        className="btn btn-primary inline-flex items-center justify-center px-6 py-3 min-h-[44px] text-sm tracking-wide"
       >
         Book Now
       </Link>

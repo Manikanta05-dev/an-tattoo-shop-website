@@ -87,7 +87,7 @@ export default function Services() {
                   )}
                   <Link
                     to="/contact"
-                    className="inline-block btn bg-[#1a1a1a] text-white font-black text-[10px] tracking-[0.18em] uppercase px-5 py-3 text-center hover:bg-[#c0392b] transition-colors duration-200 mt-auto"
+                    className="inline-block btn btn-secondary px-5 py-3 text-center text-[10px] mt-auto"
                   >
                     Book Now
                   </Link>
@@ -148,7 +148,7 @@ export default function Services() {
             href={`https://wa.me/${WHATSAPP_NUMBER}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn bg-[#1a1a1a] text-white font-black text-[12px] tracking-[0.18em] uppercase px-10 py-4 hover:bg-[#c0392b] transition-colors duration-200 flex-shrink-0"
+            className="btn btn-secondary px-10 py-4 flex-shrink-0 text-[12px]"
           >
             Book Now
           </a>
@@ -181,7 +181,7 @@ export default function Services() {
           </div>
           <Link
             to="/contact"
-            className="btn bg-[#c0392b] text-white font-black text-[12px] tracking-[0.18em] uppercase px-10 py-4 min-h-[52px] hover:bg-[#e74c3c] transition-colors duration-200 flex-shrink-0 text-center"
+            className="btn btn-primary px-10 py-4 min-h-[52px] flex-shrink-0 text-center text-[12px]"
           >
             Book Free Consultation
           </Link>

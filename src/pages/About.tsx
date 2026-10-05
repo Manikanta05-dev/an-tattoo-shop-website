@@ -60,7 +60,7 @@ export default function About() {
               <div className="mt-10">
                 <Link
                   to="/artist"
-                  className="inline-block btn bg-[#1a1a1a] text-white font-black text-[11px] tracking-[0.18em] uppercase px-8 py-4 hover:bg-[#c0392b] transition-colors duration-200"
+                  className="inline-block btn btn-secondary px-8 py-4 text-[11px]"
                 >
                   Meet the Artist
                 </Link>
@@ -142,7 +142,7 @@ export default function About() {
             </p>
             <Link
               to="/services"
-              className="inline-block btn bg-[#c0392b] text-white font-black text-[12px] tracking-[0.18em] uppercase px-10 py-4 hover:bg-[#e74c3c] transition-colors duration-200"
+              className="inline-block btn btn-primary px-10 py-4 text-[12px]"
             >
               Explore Services
             </Link>
